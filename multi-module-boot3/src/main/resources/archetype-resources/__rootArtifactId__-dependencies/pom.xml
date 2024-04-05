@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-#set( $dollar = '$' )
+		#set( $dollar = '$' )
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -112,16 +112,16 @@
 	</dependencyManagement>
 
 	<distributionManagement>
-<!--		<repository>-->
-<!--			<id>maven-releases</id>-->
-<!--			<name>maven-releases</name>-->
-<!--			<url>http://192.168.1.103:8081/repository/maven-releases/</url>-->
-<!--		</repository>-->
-<!--		<snapshotRepository>-->
-<!--			<id>maven-snapshots</id>-->
-<!--			<name>maven-snapshots</name>-->
-<!--			<url>http://192.168.1.103:8081/repository/maven-snapshots/</url>-->
-<!--		</snapshotRepository>-->
+		<!--		<repository>-->
+		<!--			<id>maven-releases</id>-->
+		<!--			<name>maven-releases</name>-->
+		<!--			<url>http://192.168.1.103:8081/repository/maven-releases/</url>-->
+		<!--		</repository>-->
+		<!--		<snapshotRepository>-->
+		<!--			<id>maven-snapshots</id>-->
+		<!--			<name>maven-snapshots</name>-->
+		<!--			<url>http://192.168.1.103:8081/repository/maven-snapshots/</url>-->
+		<!--		</snapshotRepository>-->
 	</distributionManagement>
 
 	<build>

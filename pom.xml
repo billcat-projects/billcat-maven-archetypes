@@ -9,6 +9,21 @@
 
 	<name>billcat-maven-archetypes</name>
 	<url>https://billcat.net</url>
+
+	<licenses>
+		<license>
+			<name>Apache 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>SongBai Yin</name>
+			<email>uniquejava@gmail.com</email>
+		</developer>
+	</developers>
+
 	<modules>
 		<module>multi-module-boot3</module>
 		<module>multi-module-cloud-alibaba</module>
@@ -33,6 +48,9 @@
 
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-archetype-plugin</artifactId>
