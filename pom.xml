@@ -11,6 +11,7 @@
   <url>https://billcat.net</url>
   <modules>
     <module>simple-jar</module>
+    <module>multi-module-cloud-alibaba</module>
   </modules>
 
   <properties>

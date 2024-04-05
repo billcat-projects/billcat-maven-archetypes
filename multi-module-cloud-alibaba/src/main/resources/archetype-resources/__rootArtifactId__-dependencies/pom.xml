@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+#set( $dollar = '$' )
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>${groupId}</groupId>
+	<artifactId>${rootArtifactId}-dependencies</artifactId>
+	<version>${dollar}{revision}</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<revision>${version}</revision>
+
+		<!-- 插件版本 -->
+		<maven-compiler-plugin.verison>3.11.0</maven-compiler-plugin.verison>
+		<maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+		<spring-javaformat-checkstyle.version>0.0.41</spring-javaformat-checkstyle.version>
+
+		<!-- 版本关系 https://start.spring.io/actuator/info -->
+		<spring-boot.version>3.2.4</spring-boot.version>
+		<spring-cloud.version>2023.0.0</spring-cloud.version>
+		<spring-cloud-alibaba.version>2023.0.0.0-RC1</spring-cloud-alibaba.version>
+
+		<spring-authorization-server.version>1.2.3</spring-authorization-server.version>
+		<micrometer-bom.version>1.10.4</micrometer-bom.version>
+		<hutool.version>5.8.25</hutool.version>
+		<lombok.version>1.18.30</lombok.version>
+		<io.swagger.v3.version>2.2.7</io.swagger.v3.version>
+
+		<springdoc.version>2.3.0</springdoc.version>
+		<mybatis.version>3.5.15</mybatis.version>
+		<mybatis-spring-boot.version>3.0.3</mybatis-spring-boot.version>
+		<mybatis-plus.version>3.5.5</mybatis-plus.version>
+		<easyexcel.starter.version>3.2.0</easyexcel.starter.version>
+	</properties>
+
+	<!-- 依赖声明 -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- ==================== 第三方 bom 导入 ================== -->
+			<!-- 注意 bom 导入有优先级顺序，写在前面的优先级高 -->
+			<!-- spring boot 依赖管理 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${dollar}{spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${dollar}{spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+				<version>${dollar}{spring-cloud-alibaba.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/cn.hutool/hutool-core -->
+			<dependency>
+				<groupId>cn.hutool</groupId>
+				<artifactId>hutool-core</artifactId>
+				<version>${dollar}{hutool.version}</version>
+			</dependency>
+
+
+			<!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-bom -->
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-bom</artifactId>
+				<version>${micrometer-bom.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-oauth2-authorization-server</artifactId>
+				<version>${dollar}{spring-authorization-server.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${dollar}{mybatis-plus.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${dollar}{mybatis-spring-boot.version}</version>
+			</dependency>
+
+
+			<!-- lombok 代码简化处理器 -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${dollar}{lombok.version}</version>
+			</dependency>
+
+			<!-- 服务发现-->
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+				<version>${dollar}{spring-cloud-alibaba.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${dollar}{mybatis.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-starter-common</artifactId>
+				<version>${dollar}{springdoc.version}</version>
+			</dependency>
+
+			<!--swagger v3-->
+			<dependency>
+				<groupId>io.swagger.core.v3</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${dollar}{io.swagger.v3.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
+			<dependency>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+				<version>${dollar}{springdoc.version}</version>
+			</dependency>
+
+			<!--region ============= 定义 ${rootArtifactId} 自身模块版本 ================== -->
+			<!-- common 基础 -->
+		</dependencies>
+	</dependencyManagement>
+
+	<distributionManagement>
+<!--		<repository>-->
+<!--			<id>maven-releases</id>-->
+<!--			<name>maven-releases</name>-->
+<!--			<url>http://192.168.1.103:8081/repository/maven-releases/</url>-->
+<!--		</repository>-->
+<!--		<snapshotRepository>-->
+<!--			<id>maven-snapshots</id>-->
+<!--			<name>maven-snapshots</name>-->
+<!--			<url>http://192.168.1.103:8081/repository/maven-snapshots/</url>-->
+<!--		</snapshotRepository>-->
+	</distributionManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>io.spring.javaformat</groupId>
+					<artifactId>spring-javaformat-maven-plugin</artifactId>
+					<version>${dollar}{spring-javaformat-checkstyle.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${dollar}{maven-compiler-plugin.verison}</version>
+				</plugin>
+
+				<!-- 测试插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${dollar}{maven-surefire-plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

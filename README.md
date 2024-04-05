@@ -12,7 +12,24 @@ net.billcat.archetypes
 └── submodule
 ```
 
-## 简介
+## Getting started
+
+```shell
+git clone git@github.com:billcat-projects/billcat-maven-archetypes.git
+cd billcat-maven-archetypes
+mvn clean install
+```
+
+From command line.
+
+```shell
+mvn archetype:generate \
+-DarchetypeGroupId=net.billcat.archetypes \
+-DarchetypeArtifactId=simple-jar \
+-DarchetypeVersion=1.0.0
+```
+Or use it from IJ IDEA:
+
 
 
 ## 鸡生蛋还是蛋生鸡
@@ -35,12 +52,6 @@ mvn archetype:generate \
 
 父子模块都可以使用本项目的产物创建.
 
-```shell
-mvn archetype:generate \
--DarchetypeGroupId=net.billcat.archetypes \
--DarchetypeArtifactId=simple-jar \
--DarchetypeVersion=1.0.0
-```
 
 ## License
 
