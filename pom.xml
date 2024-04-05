@@ -1,47 +1,48 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>net.billcat.archetypes</groupId>
-  <artifactId>billcat-maven-archetypes</artifactId>
-  <version>1.0.0</version>
-  <packaging>pom</packaging>
+    <groupId>net.billcat.archetypes</groupId>
+    <artifactId>billcat-maven-archetypes</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
 
-  <name>billcat-maven-archetypes</name>
-  <url>https://billcat.net</url>
-  <modules>
-    <module>simple-jar</module>
-    <module>multi-module-cloud-alibaba</module>
-    <module>simple-pom</module>
-    <module>simple-boot3</module>
-  </modules>
+    <name>billcat-maven-archetypes</name>
+    <url>https://billcat.net</url>
+    <modules>
+        <module>multi-module-boot3</module>
+        <module>multi-module-cloud-alibaba</module>
+        <module>simple-boot3</module>
+        <module>simple-pom</module>
+        <module>simple-jar</module>
+    </modules>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <archetype.test.skip>true</archetype.test.skip>
-  </properties>
-  
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.archetype</groupId>
-        <artifactId>archetype-packaging</artifactId>
-        <version>3.0.1</version>
-      </extension>
-    </extensions>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <archetype.test.skip>true</archetype.test.skip>
+    </properties>
 
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-archetype-plugin</artifactId>
-          <version>3.2.1</version>
-          <configuration>
-            <ignoreEOLStyle>true</ignoreEOLStyle>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>3.2.1</version>
+            </extension>
+        </extensions>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>3.2.1</version>
+                    <configuration>
+                        <ignoreEOLStyle>true</ignoreEOLStyle>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>

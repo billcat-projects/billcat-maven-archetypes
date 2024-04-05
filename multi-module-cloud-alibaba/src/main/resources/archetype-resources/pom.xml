@@ -30,7 +30,6 @@
     <module>${artifactId}-dependencies</module>
   </modules>
 
-
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>
