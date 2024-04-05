@@ -30,6 +30,7 @@ mvn archetype:generate \
 ```
 Or use it from IJ IDEA:
 
+![screenshot](./doc/assets/screenshot.png)
 
 
 ## 鸡生蛋还是蛋生鸡
