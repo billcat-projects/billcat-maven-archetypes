@@ -6,20 +6,20 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}-dependencies</artifactId>
+	<artifactId>${artifactId}</artifactId>
 	<version>${dollar}{revision}</version>
 	<packaging>pom</packaging>
 
 	<properties>
 		<revision>${version}</revision>
 
-		<!-- 插件版本 -->
+		<!-- maven plugins -->
 		<maven-compiler-plugin.verison>3.11.0</maven-compiler-plugin.verison>
 		<maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 		<spring-javaformat-checkstyle.version>0.0.41</spring-javaformat-checkstyle.version>
 
-		<!-- 版本关系 https://start.spring.io/actuator/info -->
+		<!-- https://start.spring.io/actuator/info -->
 		<spring-boot.version>3.2.4</spring-boot.version>
 
 		<spring-authorization-server.version>1.2.3</spring-authorization-server.version>
@@ -34,12 +34,11 @@
 		<easyexcel.starter.version>3.2.0</easyexcel.starter.version>
 	</properties>
 
-	<!-- 依赖声明 -->
 	<dependencyManagement>
 		<dependencies>
-			<!-- ==================== 第三方 bom 导入 ================== -->
-			<!-- 注意 bom 导入有优先级顺序，写在前面的优先级高 -->
-			<!-- spring boot 依赖管理 -->
+			<!-- ==================== import 3rd party bom  ================== -->
+			<!-- whichever declared first has the highest priority -->
+			<!-- spring boot dependencies -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
@@ -73,7 +72,7 @@
 				<version>${dollar}{mybatis-spring-boot.version}</version>
 			</dependency>
 
-			<!-- lombok 代码简化处理器 -->
+			<!-- lombok -->
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
@@ -106,8 +105,8 @@
 				<version>${dollar}{springdoc.version}</version>
 			</dependency>
 
-			<!--region ============= 定义 ${rootArtifactId} 自身模块版本 ================== -->
-			<!-- common 基础 -->
+			<!--region ============= ${rootArtifactId}'s inner dependencies ================== -->
+			<!-- common -->
 		</dependencies>
 	</dependencyManagement>
 
@@ -139,7 +138,7 @@
 					<version>${dollar}{maven-compiler-plugin.verison}</version>
 				</plugin>
 
-				<!-- 测试插件 -->
+				<!-- plugin for test -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
