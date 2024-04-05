@@ -10,7 +10,7 @@
   <name>billcat-maven-archetypes</name>
   <url>https://billcat.net</url>
   <modules>
-    <module>normal-project</module>
+    <module>simple-jar</module>
   </modules>
 
   <properties>

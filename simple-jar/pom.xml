@@ -9,7 +9,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>normal-project</artifactId>
+    <artifactId>simple-jar</artifactId>
     <packaging>maven-archetype</packaging>
 
     <name>Archetype - normal-project</name>

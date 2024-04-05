@@ -2,8 +2,13 @@
 
 ```
 net.billcat.archetypes
-├── normal-project
-├── multi-module-project
+├── simple-jar
+├── simple-boot3
+├── simple-pom
+├── multi-module-boot3
+├── multi-module-cloud
+├── multi-module-cloud-alibaba
+├── multi-module-cloud-k8s
 └── submodule
 ```
 
@@ -33,7 +38,7 @@ mvn archetype:generate \
 ```shell
 mvn archetype:generate \
 -DarchetypeGroupId=net.billcat.archetypes \
--DarchetypeArtifactId=normal-project \
+-DarchetypeArtifactId=simple-jar \
 -DarchetypeVersion=1.0.0
 ```
 
