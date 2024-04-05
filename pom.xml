@@ -13,6 +13,7 @@
     <module>simple-jar</module>
     <module>multi-module-cloud-alibaba</module>
     <module>simple-pom</module>
+    <module>simple-boot3</module>
   </modules>
 
   <properties>
