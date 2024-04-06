@@ -19,7 +19,7 @@
 
 	<developers>
 		<developer>
-			<name>SongBai Yin</name>
+			<name>cyper</name>
 			<email>uniquejava@gmail.com</email>
 		</developer>
 	</developers>
@@ -30,7 +30,10 @@
 		<module>simple-boot3</module>
 		<module>simple-pom</module>
 		<module>simple-jar</module>
-	</modules>
+		<module>submodule</module>
+        <module>multi-module-cloud</module>
+        <module>multi-module-cloud-jpa</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
