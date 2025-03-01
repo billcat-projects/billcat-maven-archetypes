@@ -7,9 +7,9 @@ This project contains the following archetypes:
 ```
 net.billcat.archetypes
 ├── simple-jar
-├── simple-boot3
+├── simple-boot3x
 ├── simple-pom
-├── multi-module-boot3
+├── multi-module-boot3x
 ├── multi-module-cloud
 ├── multi-module-cloud-jpa
 ├── multi-module-cloud-alibaba
@@ -20,9 +20,9 @@ net.billcat.archetypes
 | # | Archetype name             | Comment                                              |
 |---|----------------------------|------------------------------------------------------|
 | 1 | simple-jar                 | same with maven-archetype-quickstart but with junit5 |
-| 2 | simple-boot3               | same with https://start.spring.io                    |
+| 2 | simple-boot3x              | same with https://start.spring.io                    |
 | 3 | simple-pom                 | just a pom.xml file, good for empty new project      |
-| 4 | multi-module-boot3         | spring boot only multi-module project                |
+| 4 | multi-module-boot3x        | spring boot only multi-module project                |
 | 5 | multi-module-cloud         | spring cloud + mybatis plus                          |
 | 6 | multi-module-cloud-jpa     | spring cloud + jpa                                   |
 | 7 | multi-module-cloud-alibaba | spring cloud alibaba                                 |
@@ -84,6 +84,10 @@ ROOT/
  ```
 
 However, in our projects, the relationship is inverted, project `ROOT` depends on project `dependencies`. I can't find any `maven-archetype-plugin` configuration to let it stop adding `<parent>` tag for its submodules. You have to remove the `<parent>` tag in `dependencies` project manually.
+
+在新建 multi-module-boot3x 项目后， 需要删除 xxx-dependencies 中的 parent 指向， 依赖关系为：
+
+> 各个子模块 ---depends on--> ROOT项目 ---depends on--> xxx-dependencies
 
 ## Developer guide
 

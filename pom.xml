@@ -25,7 +25,8 @@
 	</developers>
 
 	<modules>
-		<module>multi-module-boot3</module>
+		<module>multi-module-boot32</module>
+		<module>multi-module-boot34</module>
 		<module>multi-module-cloud-alibaba</module>
 		<module>simple-boot3</module>
 		<module>simple-pom</module>

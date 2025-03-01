@@ -14,24 +14,21 @@
 		<revision>${version}</revision>
 
 		<!-- maven plugins -->
-		<maven-compiler-plugin.verison>3.11.0</maven-compiler-plugin.verison>
-		<maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+		<maven-compiler-plugin.verison>3.13.0</maven-compiler-plugin.verison>
+		<maven-surefire-plugin.version>3.2.2</maven-surefire-plugin.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 		<spring-javaformat-checkstyle.version>0.0.41</spring-javaformat-checkstyle.version>
 
 		<!-- https://start.spring.io/actuator/info -->
-		<spring-boot.version>3.2.4</spring-boot.version>
+		<spring-boot.version>3.4.1</spring-boot.version>
 
-		<spring-authorization-server.version>1.2.3</spring-authorization-server.version>
 		<hutool.version>5.8.25</hutool.version>
-		<lombok.version>1.18.30</lombok.version>
-		<io.swagger.v3.version>2.2.7</io.swagger.v3.version>
+		<lombok.version>1.18.36</lombok.version>
+		<io.swagger.v3.version>2.2.9</io.swagger.v3.version>
 
-		<springdoc.version>2.3.0</springdoc.version>
-		<mybatis.version>3.5.15</mybatis.version>
-		<mybatis-spring-boot.version>3.0.3</mybatis-spring-boot.version>
-		<mybatis-plus.version>3.5.5</mybatis-plus.version>
-		<easyexcel.starter.version>3.2.0</easyexcel.starter.version>
+		<springdoc.version>2.7.0</springdoc.version>
+		<mybatis-plus.version>3.5.9</mybatis-plus.version>
+		<easyexcel.starter.version>4.0.3</easyexcel.starter.version>
 	</properties>
 
 	<dependencyManagement>
@@ -55,34 +52,9 @@
 			</dependency>
 
 			<dependency>
-				<groupId>org.springframework.security</groupId>
-				<artifactId>spring-security-oauth2-authorization-server</artifactId>
-				<version>${dollar}{spring-authorization-server.version}</version>
-			</dependency>
-
-			<dependency>
 				<groupId>com.baomidou</groupId>
 				<artifactId>mybatis-plus-boot-starter</artifactId>
 				<version>${dollar}{mybatis-plus.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.mybatis</groupId>
-				<artifactId>mybatis-spring</artifactId>
-				<version>${dollar}{mybatis-spring-boot.version}</version>
-			</dependency>
-
-			<!-- lombok -->
-			<dependency>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok</artifactId>
-				<version>${dollar}{lombok.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.mybatis</groupId>
-				<artifactId>mybatis</artifactId>
-				<version>${dollar}{mybatis.version}</version>
 			</dependency>
 
 			<dependency>

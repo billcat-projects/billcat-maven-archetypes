@@ -9,8 +9,8 @@
 		<version>1.0.0</version>
 	</parent>
 
-	<artifactId>multi-module-boot3</artifactId>
+	<artifactId>multi-module-boot34</artifactId>
 	<packaging>maven-archetype</packaging>
 
-	<name>Archetype - multi-module-boot3</name>
+	<name>Archetype - multi-module-boot34</name>
 </project>
